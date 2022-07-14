@@ -1,0 +1,43 @@
+---
+- name: Install macOS packages
+  hosts: all
+  become: false
+  vars:
+    brew_tap_repos:
+      - aws/tap                   # Provides: aws-sam-cli
+      - homebrew/cask-fonts
+    brew_cask_packages:
+      - iterm2
+      - font-fira-code-nerd-font  # requires cask-fonts tap
+      - font-hack-nerd-font       # requires cask-fonts tap
+      - font-sf-mono-for-powerline
+      - rar
+      - xquartz
+      - wireshark
+    brew_packages:
+      - awscli
+      - aws-cdk
+      - aws-sam-cli               # Requires `aws/tap` tap
+      - cmake                     # Needed to build `neovide`
+      - colordiff                 # Seeing diff in color
+      - cowsay
+      - exa
+      - go
+      - htop
+      - httpstat
+      - jc                        # Serializes output of cli tools to structured JSON output
+      - jq
+      - mtr                       # ping+traceroute tool
+      - neovim
+      - nmap
+      - nnn                       # command-line file browser
+      - redis
+      - ripgrep
+      - rustup-init               # Tool used to install rust compiler
+      - sqlx-cli                  # command line for Rust sqlx
+      - terraform
+      - tmux
+      - tree
+
+  tasks:
+    - import_tasks: tasks/homebrew.yml

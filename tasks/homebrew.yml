@@ -1,0 +1,18 @@
+---
+- name: Install homebrew repository
+  community.general.homebrew_tap:
+    name: "{{ brew_tap_repos }}"
+    state: present
+  tags: brew, brew-repos
+
+- name: Install homebrew packages
+  community.general.homebrew:
+    name: "{{ brew_packages }}"
+    state: present
+  tags: brew, brew-pkg
+
+- name: Install homebrew cask packages
+  community.general.homebrew_cask:
+    name: "{{ brew_cask_packages }}"
+    state: present
+  tags: brew, brew-cask
