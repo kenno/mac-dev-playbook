@@ -1,10 +1,10 @@
-# Ansible playbook to install homebrew packages on Mac machine
+# Ansible playbook to install Homebrew packages on a macOS machine
 
-## Prerequsite
+## Prerequisite
 
 You need to install Ansible on your machine, aka the control node. Follow the official [Installation Guide](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-ansible-on-specific-operating-systems).
 
-Here an example on instaling Ansible on a macOS using homebrew:
+Here an example for installing Ansible on macOS using [Homebrew](https://brew.sh/):
 
 ```
 ❯ brew install ansible
