@@ -5,23 +5,22 @@
   vars:
     brew_tap_repos:
       - aws/tap                   # Provides: aws-sam-cli
-      - homebrew/cask-fonts
     brew_cask_packages:
-      - iterm2
       - font-fira-code-nerd-font  # requires cask-fonts tap
       - font-hack-nerd-font       # requires cask-fonts tap
       - font-sf-mono-for-powerline
       - rar
-      - xquartz
-      - wireshark
+      #- xquartz
+      #- wireshark
     brew_packages:
-      - awscli
-      - aws-cdk
-      - aws-sam-cli               # Requires `aws/tap` tap
+      #- awscli
+      #- aws-cdk
+      #- aws-sam-cli               # Requires `aws/tap` tap
+      - alacritty                 # Awesome terminal emulator
       - cmake                     # Needed to build `neovide`
       - colordiff                 # Seeing diff in color
       - cowsay
-      - exa
+      - eza
       - go
       - htop
       - httpstat
@@ -35,7 +34,7 @@
       - ripgrep
       - rustup-init               # Tool used to install rust compiler
       - sqlx-cli                  # command line for Rust sqlx
-      - terraform
+      #- terraform
       - tmux
       - tree
 
