@@ -3,8 +3,8 @@
   hosts: all
   become: false
   vars:
-    brew_tap_repos:
-      - aws/tap                   # Provides: aws-sam-cli
+    brew_tap_repos: []
+      #- aws/tap                   # Provides: aws-sam-cli
     brew_cask_packages:
       - font-fira-code-nerd-font  # requires cask-fonts tap
       - font-hack-nerd-font       # requires cask-fonts tap
