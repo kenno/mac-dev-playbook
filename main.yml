@@ -3,12 +3,11 @@
   hosts: all
   become: false
   vars:
-    brew_tap_repos: []
+    brew_tap_repos: []            # For empty list, use '[]'
       #- aws/tap                   # Provides: aws-sam-cli
     brew_cask_packages:
-      - font-fira-code-nerd-font  # requires cask-fonts tap
-      - font-hack-nerd-font       # requires cask-fonts tap
-      - font-sf-mono-for-powerline
+      - font-fira-code-nerd-font
+      - font-hack-nerd-font
       - rar
       #- xquartz
       #- wireshark
@@ -30,11 +29,9 @@
       - neovim
       - nmap
       - nnn                       # command-line file browser
-      - redis
       - ripgrep
       - rustup-init               # Tool used to install rust compiler
       - sqlx-cli                  # command line for Rust sqlx
-      #- terraform
       - tmux
       - tree
 
